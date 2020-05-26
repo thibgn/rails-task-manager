@@ -1,14 +1,20 @@
+<div class="container">
 <h2>Update task</h2>
-<%= form_for(@task) do |t| %>
+<%= simple_form_for(@task) do |t| %>
   <%= t.label :title %>
   <%= t.text_field :title %>
   <%= t.label :details %>
   <%= t.text_field :details %>
+  <span class="checkbox">
   <%= t.label :completed %>
   <%= t.check_box :completed %>
-  <%= t.submit %>
+  </span>
+  <span class="buttons">
+  <%= t.submit class: "btn btn-primary col-6" %>
+  <%= link_to 'Delete task', 
+  task_path(@task), 
+  method: :delete, 
+  data: { confirm: "u sure bro ?" }, class: "btn btn-danger col-6" %>
+  </span>
 <% end %>
-<%= link_to 'Delete task', 
-task_path(@task), 
-method: :delete, 
-data: { confirm: "u sure bro ?" } %>
+</div>

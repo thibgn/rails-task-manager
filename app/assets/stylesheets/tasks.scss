@@ -1,3 +1,53 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.container {
+  margin-top: 2rem;
+}
+
+.checkbox {
+  cursor: pointer;
+}
+
+.simple_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.simple_form>input,
+label {
+  margin: .3rem;
+}
+
+.task>.fas {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.fa-trash-alt:hover {
+  color: red;
+}
+
+.task-infos { position: relative}
+
+.done, .todo { position: absolute; right: 0; top: -2rem;}
+.done {
+  padding: .1rem .6rem;
+  background-color: rgb(30, 155, 30);
+  color: white;
+}
+
+.todo {
+  padding: .1rem .6rem;
+  background-color: rgb(187, 26, 26);
+  color: white;
+}
+
+.date {
+  opacity: .5;
+  font-size: .7rem;
+}
+
+span > .buttons {
+  padding: 20px;
+}

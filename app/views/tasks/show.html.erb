@@ -1,19 +1,21 @@
-<h1>My tasks</h1>
+<div class="container">
+<h1>My tasks 📁</h1>
 
 <hr/>
 
 <h3><%= @task.title %></h3>
 
-<%= link_to 'Update task', :edit_task %>
-
 <div class="task-infos">
+<%= @task.completed==true ? 
+"<span class='done'>done".html_safe : "<span class='todo'>todo".html_safe %>
+</span>
 
 <p><%= @task.details %></p>
-<p>Done ? <%= @task.completed==true %></p>
-<p>Date: <%= @task.created_at %></p>
+<p class="date">Created at <%= @task.created_at %></p>
 
 </div>
 
 <hr/>
-
-<%= link_to '< Back to tasks', :root %>
+<%= link_to '< Back to tasks', :tasks, class: "btn btn-secondary" %>
+<%= link_to 'Update task', :edit_task, class: "btn btn-primary" %>
+</div>

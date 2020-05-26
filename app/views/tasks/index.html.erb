@@ -1,12 +1,22 @@
-<h1>My tasks</h1>
+<div class="container">
+<h1>My tasks 📁</h1>
 <hr />
-<ul>
-  <% @tasks.each do |task| %>
-  <li>
-    <%=task.completed ? "[x] " : "[ ] "%>
+<div class="tasklist">
+<% @tasks.each do |task| %>
+  <div class="task">
+  <span class="checkbox">
+    <%=task.completed ? "✅ " : "⬜ "%>
+  </span>
     <%= link_to task.title, task_path(task) %>
-  </li>
-  <% end %>
+    <%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe,
+    task_path(task), 
+    method: :delete, 
+    data: { confirm: "u sure bro ?" } %>
+  </div>
+<% end %>
+</div>
+
 </ul>
 <hr />
-<%= link_to 'Add a new task', :new_task %>
+<%= link_to 'Add a new task', :new_task, class: "btn btn-primary" %>
+</div>

@@ -1,8 +1,8 @@
+<div class="container">
 <h2>New task</h2>
-<%= form_for(@task) do |t| %>
-  <%= t.label :title %>
-  <%= t.text_field :title %>
-  <%= t.label :details %>
-  <%= t.text_field :details %>
-  <%= t.submit %>
+<%= simple_form_for(@task) do |t| %>
+  <%= t.text_field :title, placeholder: "Title"  %>
+  <%= t.text_field :details, placeholder: "Details" %>
+  <%= t.submit class: "btn btn-primary" %>
 <% end %>
+</div>
