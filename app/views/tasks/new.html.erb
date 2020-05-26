@@ -1,5 +1,8 @@
 <h2>New task</h2>
 <%= form_for(@task) do |t| %>
-  <%= t.title  :title %>
-  <%= t.text  :details %>
+  <%= t.label :title %>
+  <%= t.text_field :title %>
+  <%= t.label :details %>
+  <%= t.text_field :details %>
+  <%= t.submit %>
 <% end %>
