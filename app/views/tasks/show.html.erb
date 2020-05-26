@@ -1,0 +1,8 @@
+<h1>My tasks</h1>
+<hr/>
+<h3><%= @task.title %></h3>
+<div class="task-infos">
+<p><%= @task.details %></p>
+<p>Done ? <%= @task.completed==true %></p>
+<p>Date: <%= @task.created_at %></p>
+</div>
