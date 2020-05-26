@@ -48,6 +48,11 @@ label {
   font-size: .7rem;
 }
 
-span > .buttons {
-  padding: 20px;
+.buttons {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
 }
+
+.btn {margin: 10px;}
